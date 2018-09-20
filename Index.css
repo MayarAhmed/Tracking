@@ -1,0 +1,306 @@
+.head-color{
+    color:#0d3380;
+}
+
+
+
+.base{
+    background-image:url('assets/images/chuttersnap-458795-unsplash.jpg');
+    background-size:cover;
+    width:100%
+}
+
+.overlay{
+    
+    background-color:#434141;
+    opacity:.3;
+    width:100%;
+    height:100%;
+    top:0px;
+}
+.nav-cst{
+        background-color:#06183D;
+}
+.dropdown-item:hover{
+    background-color:#00B9C4;
+}
+.navbar{
+    z-index:9;
+}
+.cst-btn{
+    background-color:#FF6D10;
+    color:#fff;
+}
+
+.navbar-toggler-icon{
+    
+    color:#fff;
+    font-size:30px;
+    border:none;
+    
+}
+/*** Tracking Search *****/
+
+.search{
+    top:40%;
+    left:25%;
+}
+
+.search-text{
+   letter-spacing: 5px;
+    margin-top:-50px;
+  }
+h1{
+    font-size:50px;
+}
+.input-group-text{
+    background-color:#FF6D10;
+    border:none;
+}
+
+input[type="text"]::-webkit-input-placeholder {
+  color: #797979;
+    opacity:.5;
+    font-size:13px;
+    font-style:italic;
+}
+
+@media (min-width: 576px) and (max-width: 768px){ 
+    .input-group-prepend input{
+       width:80px; 
+    }
+    .input-group-text {
+        font-size:15px;
+        width:50px;
+    }
+}
+
+/**************** Tracking Info **********************/
+
+
+
+.track-no:hover{
+    text-decoration:none;
+}
+.hide{display:none;}
+.track-info .table {
+  margin: 0 0 40px 0;
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  display: table;
+}
+@media screen and (max-width: 580px) {
+  .table {
+    display: block;
+  }
+}
+
+.track-info .row {
+  display: table-row;
+  background: #f6f6f6;
+}
+.track-info .row:nth-of-type(odd) {
+  background: #e9e9e9;
+}
+.track-info .row.header {
+  font-weight: 900;
+  color: #ffffff;
+  background: #FF6D10;
+}
+.track-info .row.green {
+  background: #27ae60;
+}
+.track-info .row.blue {
+  background: #2980b9;
+}
+@media screen and (max-width: 580px) {
+  .row {
+    padding: 14px 0 7px;
+    display: block;
+  }
+  .row.header {
+    padding: 0;
+    height: 6px;
+  }
+  .row.header .cell {
+    display: none;
+  }
+  .row .cell {
+    margin-bottom: 10px;
+  }
+  .row .cell:before {
+    margin-bottom: 3px;
+    content: attr(data-title);
+    min-width: 98px;
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #969696;
+    display: block;
+  }
+}
+
+.cell {
+  padding: 6px 12px;
+  display: table-cell;
+}
+@media screen and (max-width: 580px) {
+  .cell {
+    padding: 2px 16px;
+    display: block;
+  }
+}
+
+.track-info ol {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.track-info ol li {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+.track-info ol li::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: #FF6D10;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 50%;
+  margin-left: -5px;
+  border-radius: 100%;
+cursor: pointer;
+}
+.track-info ol li span {
+  display: inline-block;
+  padding: 10px;
+}
+.track-info ol li span::before,
+.track-info ol li span::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 50%;
+  background-color: #0d3380;
+  position: absolute;
+  top: 0;
+}
+.track-info ol li span::before {
+  left: 0;
+}
+.track-info ol li span::after {
+  right: 0;
+}
+.track-info ol li:first-child span::before {
+  display: none;
+}
+.track-info ol li:last-child span::after {
+  display: none;
+}
+
+.noshow{
+    display:none;
+}
+.track-info ol .reach::before ,
+.track-info ol .deliver::before{
+    background-color:#ddd;
+}
+/************ Map ****************/
+
+#chartdiv {
+  width: 100%;
+  height: 500px;
+}
+
+.map-marker {
+    /* adjusting for the marker dimensions
+    so that it is centered on coordinates */
+    margin-left: -8px;
+    margin-top: -8px;
+}
+.map-marker.map-clickable {
+    cursor: pointer;
+}
+.pulse {
+    width: 10px;
+    height: 10px;
+    border: 5px solid #f7f14c;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    background-color: #716f42;
+    z-index: 10;
+    position: absolute;
+  }
+.map-marker .dot {
+    border: 10px solid #fff601;
+    background: transparent;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px;
+    height: 50px;
+    width: 50px;
+    -webkit-animation: pulse 3s ease-out;
+    -moz-animation: pulse 3s ease-out;
+    animation: pulse 3s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    z-index: 1;
+    opacity: 0;
+  }
+  @-moz-keyframes pulse {
+   0% {
+      -moz-transform: scale(0);
+      opacity: 0.0;
+   }
+   25% {
+      -moz-transform: scale(0);
+      opacity: 0.1;
+   }
+   50% {
+      -moz-transform: scale(0.1);
+      opacity: 0.3;
+   }
+   75% {
+      -moz-transform: scale(0.5);
+      opacity: 0.5;
+   }
+   100% {
+      -moz-transform: scale(1);
+      opacity: 0.0;
+   }
+  }
+  @-webkit-keyframes "pulse" {
+   0% {
+      -webkit-transform: scale(0);
+      opacity: 0.0;
+   }
+   25% {
+      -webkit-transform: scale(0);
+      opacity: 0.1;
+   }
+   50% {
+      -webkit-transform: scale(0.1);
+      opacity: 0.3;
+   }
+   75% {
+      -webkit-transform: scale(0.5);
+      opacity: 0.5;
+   }
+   100% {
+      -webkit-transform: scale(1);
+      opacity: 0.0;
+   }
+  }
+
+
